@@ -341,7 +341,7 @@ section.service .img.motion:after { background: #e8fcff; }
 @media screen and (max-width:1400px){/*1400px~1024px사이*/
     section.visual .mainTxt {margin-top: 100px;}
     section.visual .mainTxt .tit {font-size: 46px;}
-    section.visual .mainTxt .txt{padding: 20px 0px 0px 0px;}
+    section.visual .mainTxt .txt{padding: 20px 0px 0px 50px;}
     section .inner{width: 100%; padding: 0 30px; box-sizing: border-box;}
     .img img {width:100%;}
     /*section.journal{overflow: hidden;}*/

@@ -216,36 +216,37 @@ input[type=submit] {
 section .inner {width: 1320px; margin:auto; overflow: hidden;}
 section .inner .box {float: left; width: 50%;}
 
-/*section.journal*/
-section.journal {position: relative; padding: 190px 0 120px;}
-section.journal .scroll {text-transform: uppercase; position:absolute; left: 50%;transform: translateX(-50%); top:-20px; font-size: 10px;letter-spacing: 5px; writing-mode: vertical-rl; padding-top: 90px; }
-section.journal .scroll:before {content: ''; position: absolute; height: 75px; width: 1px; background: #333; top:0; left: 6px;}
-section.journal .inner .box .img {padding-top: 100px; float:right;}
-section.journal .inner .box .tit {margin-bottom: 40px;}
-section.journal .inner .box ul {border-top: 1px solid #e6e6e6; padding-top: 40px;}
-section.journal .inner .box ul li {margin-bottom: 30px; overflow: hidden;}
-section.journal .inner .box ul li h3{ float: left; width: 15%; font-size: 20px; font-weight: bold;}
-section.journal .inner .box ul li p {float: left; width: 85%; color: #888; font-size: 20px; line-height: 130%}
+/*section.howTo*/
+section.howTo {position: relative; padding: 190px 0 120px;}
+section.howTo .scroll {text-transform: uppercase; position:absolute; left: 50%;transform: translateX(-50%); top:-20px; font-size: 10px;letter-spacing: 5px; writing-mode: vertical-rl; padding-top: 90px; }
+section.howTo .scroll:before {content: ''; position: absolute; height: 75px; width: 1px; background: #333; top:0; left: 6px;}
+section.howTo .inner .box .img {padding-top: 100px; float:right;}
+section.howTo .inner .box .tit {margin-bottom: 40px;}
+section.howTo .inner .box ul {border-top: 1px solid #e6e6e6; padding-top: 40px;}
+section.howTo .inner .box ul li {margin-bottom: 30px; overflow: hidden;}
+section.howTo .inner .box ul li h3{ float: left; width: 15%; font-size: 20px; font-weight: bold;}
+section.howTo .inner .box ul li p {float: left; width: 85%; color: #888; font-size: 20px; line-height: 130%}
 
-/*section.service*/
-section.service {padding: 190px 0;}
-section.service .inner {}
-section.service .inner .box .img {margin-top: 60px;}
-section.service .inner .box.design {width: 45%; margin-top: -40%; padding-top: 60px; border-top: 1px solid #c4e5ea;}
-section.service .inner .box.design .tit {font-size: 30px; line-height: 1.4;margin-bottom: 20px;}
+/*section.about*/
+section.about {padding: 190px 0;}
+section.about .inner {}
+section.about .inner .box .img {margin-top: 60px;}
+section.about .inner .box.design {width: 45%; margin-top: -40%; padding-top: 60px; border-top: 1px solid #c4e5ea;}
+section.about .inner .box.design .tit {font-size: 30px; line-height: 1.4;margin-bottom: 20px;}
 
-/*section.customer*/
-section.customer {padding: 160px; text-align: center; background: url(../img/img_04.jpg) no-repeat center/cover; }
-section.customer .tit {color: #fff; font-size: 40px; margin-bottom: 10px;}
-section.customer .txt {color:#777;}
+/*section.create*/
+section.create {padding: 160px; text-align: center; background: url(../img/img_04.jpg) no-repeat center/cover; }
+section.create .tit {color: #fff; font-size: 40px; margin-bottom: 10px;}
+section.create .txt {color:#000;}
+.dark-mode section.create .txt  {color:#000000;}
 
 
-/*section.team*/
-section.team {padding: 190px 0; position: relative;}
-section.team .inner .box.left {text-align: right; padding-right: 80px; box-sizing: border-box;}
-section.team .inner .box .tit {margin-top:40px; }
-section.team .inner .box .img{margin-top: 100px;}
-section.team .inner .box .txt {margin: 30px 0;}
+/*section.feedback*/
+section.feedback {padding: 190px 0; position: relative;}
+section.feedback .inner .box.left {text-align: right; padding-right: 80px; box-sizing: border-box;}
+section.feedback .inner .box .tit {margin-top:40px; }
+section.feedback .inner .box .img{margin-top: 100px;}
+section.feedback .inner .box .txt {margin: 30px 0;}
 
 /*footer*/
 .dark-mode footer { color: #fff}
@@ -265,8 +266,8 @@ footer .bottom ul li b:nth-child(1) { display: inline-block; margin-bottom: 12px
 /*circleBox SVG*/
 .circleBox  {display: block; transform: rotate(-90deg);}
 .circleBox .svgAni path {fill:none; stroke: #f5f5f5; stroke-width: 25; stroke-dasharray:1564; stroke-dashoffset: 0; }
-section.journal .circleBox {width:700px; position:absolute; right: 13%; top:100px; z-index: -1;}
-section.team .circleBox {width:700px; position:absolute; top:-50px; left: 20%; z-index: -1;}
+section.howTo .circleBox {width:700px; position:absolute; right: 13%; top:100px; z-index: -1;}
+section.feedback .circleBox {width:700px; position:absolute; top:-50px; left: 20%; z-index: -1;}
 
 /*SVG 애니메이션*/
 .circleBox.motion .svgAni path {animation-name : dash; animation-duration: 1.5s;}
@@ -294,12 +295,12 @@ section.team .circleBox {width:700px; position:absolute; top:-50px; left: 20%; z
     0%{height: 90%;}
 }
 
-section.team .img.motion:after {display: none;}
+section.feedback .img.motion:after {display: none;}
 
-/*section.service 배경색 애니*/
+/*section.about 배경색 애니*/
 body{transition: all 0.4s;}
 body.on { background: #e8fcff; transition: all 0.4s;}
-section.service .img.motion:after { background: #e8fcff; }
+section.about .img.motion:after { background: #e8fcff; }
 
 
 /*menuOpen*/
@@ -353,11 +354,11 @@ section.service .img.motion:after { background: #e8fcff; }
     section.visual .mainTxt .txt{padding: 20px 0px 0px 50px;}
     section .inner{width: 100%; padding: 0 30px; box-sizing: border-box;}
     .img img {width:100%;}
-    /*section.journal{overflow: hidden;}*/
-    section.journal .scroll{display: none;}
-    section.journal .circleBox{ right: -10%; top:0;}
-    section.journal .inner .box .img{width: 90%;}
-    section.customer {padding: 160px 0;}
+    /*section.howTo{overflow: hidden;}*/
+    section.howTo .scroll{display: none;}
+    section.howTo .circleBox{ right: -10%; top:0;}
+    section.howTo .inner .box .img{width: 90%;}
+    section.create {padding: 160px 0;}
     footer {width: 100%; padding: 0 30px; box-sizing: border-box;}
 }
 
@@ -371,26 +372,26 @@ section.service .img.motion:after { background: #e8fcff; }
     section.visual .mainImg img {width: 100%;}
     section.visual .mainTxt{width: 100%; float: none; margin-top: 50px;}
     section .inner .box {float: none; width: 100%;}
-    section.journal{padding: 80px 0;}
-    section.journal .circleBox {top:200px;}
-    section.journal .inner .box .img {margin: 0 auto 50px; padding-top: 0; width: 80%; }
-    section.service {padding: 80px 0;}
-    section.service .txt {margin-top: 20px;}
-    section.service .inner .box.design {margin-top: 50px; width: 100%;}
-    section.service .inner .box .img { margin: 50px auto 0; width:90%;}
-    section.service .inner .box .img {width: 70%; }
-    section.service .inner .box.design .img {width: 70%; margin:50px 0 0;}
-    section.service .img.motion:after {background: #fff;}
-    section.service .inner .box.design .tit {font-size: 35px;}
-    section.customer{padding: 120px 0;}
-    section.customer .tit {font-size: 30px;}
-    section.team{padding: 80px 0; overflow: hidden}
-    section.team .circleBox {left: 15%;}
-    section.team .inner .box.left {padding-right: 0; overflow: hidden;}
-    section.team .inner .box .img{margin-top: 50px; width: 70%; float: right; clear: both;}
-    section.team .inner .box:nth-child(2) .img {width: 100%; margin: 50px 0;}
-    section.team .inner .box .tit {margin-top: 0; clear: both;}
-    section.team .inner .box.left .moreBtn {float: right; margin-right: 5px;}
+    section.howTo{padding: 80px 0;}
+    section.howTo .circleBox {top:200px;}
+    section.howTo .inner .box .img {margin: 0 auto 50px; padding-top: 0; width: 80%; }
+    section.about {padding: 80px 0;}
+    section.about .txt {margin-top: 20px;}
+    section.about .inner .box.design {margin-top: 50px; width: 100%;}
+    section.about .inner .box .img { margin: 50px auto 0; width:90%;}
+    section.about .inner .box .img {width: 70%; }
+    section.about .inner .box.design .img {width: 70%; margin:50px 0 0;}
+    section.about .img.motion:after {background: #fff;}
+    section.about .inner .box.design .tit {font-size: 35px;}
+    section.create{padding: 120px 0;}
+    section.create .tit {font-size: 30px;}
+    section.feedback{padding: 80px 0; overflow: hidden}
+    section.feedback .circleBox {left: 15%;}
+    section.feedback .inner .box.left {padding-right: 0; overflow: hidden;}
+    section.feedback .inner .box .img{margin-top: 50px; width: 70%; float: right; clear: both;}
+    section.feedback .inner .box:nth-child(2) .img {width: 100%; margin: 50px 0;}
+    section.feedback .inner .box .tit {margin-top: 0; clear: both;}
+    section.feedback .inner .box.left .moreBtn {float: right; margin-right: 5px;}
     footer .bottom ul li:nth-child(1) {width: 100%; margin-bottom: 30px;}
     footer .bottom ul li {width: 33.3333%;}
 }
@@ -412,29 +413,29 @@ section.service .img.motion:after { background: #e8fcff; }
     .txt {text-align: justify;}
     .moreBtn{font-size: 12px;}
     section .inner {padding: 0 20px;}
-    section.journal {padding: 50px 0;}
-    section.journal .circleBox {top:15%; right: -4%;}
-    section.journal .inner .box .img {width: 100%; margin-bottom: 30px;}
-    section.journal .inner .box .tit {margin-bottom: 20px;}
-    section.journal .inner .box ul {padding-top: 20px;}
-    section.journal .inner .box ul li {margin-bottom: 20px;}
-    section.journal .inner .box ul li h3 {width: 100%; margin-bottom: 10px;}
-    section.journal .inner .box ul li p {font-size: 12px; width: 100%;}
-    section.journal .inner .box .moreBtn {margin-left: 0;}
-    section.service {padding: 50px 0;}
-    section.service .inner .box .img {width: 100%; margin-top: 30px;}
-    section.service .inner .box.design .img {width: 100%;}
-    section.service .inner .box .img.motion:after {background: #e8fcff;}
-    section.service .inner .box.design .img.motion:after {background: #fff;}
-    section.service .inner .box.design {padding-top: 50px;}
-    section.service .inner .box.design .tit {font-size: 25px; margin-bottom: 10px;}
-    section.customer {padding: 20px 20px;}
-    section.customer .tit {font-size: 25px;}
-    section.team {padding: 20px 0;}
-    section.team .circleBox {left: 4%;}
-    section.team .inner .box .txt {margin: 30px 0 10px;}
-    section.team .inner .box .img {margin-top: 30px;}
-    section.team .inner .box:nth-child(2) .img {margin: 30px 0;}
+    section.howTo {padding: 50px 0;}
+    section.howTo .circleBox {top:15%; right: -4%;}
+    section.howTo .inner .box .img {width: 100%; margin-bottom: 30px;}
+    section.howTo .inner .box .tit {margin-bottom: 20px;}
+    section.howTo .inner .box ul {padding-top: 20px;}
+    section.howTo .inner .box ul li {margin-bottom: 20px;}
+    section.howTo .inner .box ul li h3 {width: 100%; margin-bottom: 10px;}
+    section.howTo .inner .box ul li p {font-size: 12px; width: 100%;}
+    section.howTo .inner .box .moreBtn {margin-left: 0;}
+    section.about {padding: 50px 0;}
+    section.about .inner .box .img {width: 100%; margin-top: 30px;}
+    section.about .inner .box.design .img {width: 100%;}
+    section.about .inner .box .img.motion:after {background: #e8fcff;}
+    section.about .inner .box.design .img.motion:after {background: #fff;}
+    section.about .inner .box.design {padding-top: 50px;}
+    section.about .inner .box.design .tit {font-size: 25px; margin-bottom: 10px;}
+    section.create {padding: 20px 20px;}
+    section.create .tit {font-size: 25px;}
+    section.feedback {padding: 20px 0;}
+    section.feedback .circleBox {left: 4%;}
+    section.feedback .inner .box .txt {margin: 30px 0 10px;}
+    section.feedback .inner .box .img {margin-top: 30px;}
+    section.feedback .inner .box:nth-child(2) .img {margin: 30px 0;}
     footer {padding: 0 20px;}
     footer .top .tit {font-size: 31px; padding-bottom: 30px;}
     footer .bottom ul li:nth-child(1) {font-size: 20px;}
@@ -449,8 +450,8 @@ section.service .img.motion:after { background: #e8fcff; }
     .tit span.en_s {font-size: 16px;}
     section.visual .mainTxt .tit, .tit,footer .top .tit {font-size: 27px;}
     .menuOpen .menuWrap .tit {font-size: 27px;}
-    section.journal .inner .box ul li h3 {font-size: 14px;}
-    section.service .inner .box.design .img.motion:after {background: #e8fcff;}
-    section.service .inner .box.design .tit {font-size: 22px;}
+    section.howTo .inner .box ul li h3 {font-size: 14px;}
+    section.about .inner .box.design .img.motion:after {background: #e8fcff;}
+    section.about .inner .box.design .tit {font-size: 22px;}
     .moreBtn {font-size: 11px;}
 }

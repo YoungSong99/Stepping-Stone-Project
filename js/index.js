@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Create a new counter element and set its text
         const newCounter = document.createElement("p");
         newCounter.id = "counter";
-        newCounter.textContent = `️🖤   ${count} people have shared feedback.`;
+        newCounter.innerHTML = `️<b>🖤   ${count} people have shared feedback.</b>`;
 
         // Append the new counter to the signatures section
         const signaturesSection = document.querySelector(".signatures");
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (validateEmail(email)) {
             // If the email format is correct, display the email content and count
-            signatureParagraph.innerHTML = `🖊️ <b>${name}</b> said "<b>${subject}</b>"`;
+            signatureParagraph.textContent = `🖊️ ${name} said "${subject}"`;
             // Find the signatures section and append the new signature
             const signaturesSection = document.querySelector(".signatures");
             signaturesSection.appendChild(signatureParagraph);

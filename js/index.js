@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    <!--Form validation and submission logic-->
+
+    // Form validation and submission logic
     const signPetitionForm = document.getElementById("sign-petition");
     const signNowButton = document.getElementById("sign-now-button");
 
@@ -42,8 +43,26 @@ document.addEventListener("DOMContentLoaded", function () {
         return regex.test(email);
     };
 
-    const modal = document.getElementById("myModal");
+    const modal = document.getElementById('myModal');
+    const closeModalButton = document.querySelector(".close"); // 수정된 부분
 
+    closeModalButton.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    // 모달 밖을 클릭했을 때 닫기
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    // ESC 키로 모달 닫기
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            modal.style.display = "none";
+        }
+    });
     function updateSignatureCount() {
         // Find the existing counter element and remove it
         const counter = document.getElementById("counter");
@@ -78,6 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Create a new paragraph element for the signature
         const signatureParagraph = document.createElement("p");
         var span = document.getElementsByClassName("close")[0];
+        const emailError = document.getElementById('email-error');
+
 
         if (validateEmail(email)) {
             // If the email format is correct, display the email content and count
@@ -90,15 +111,38 @@ document.addEventListener("DOMContentLoaded", function () {
             count += 1;
             updateSignatureCount();
             signPetitionForm.reset();
+            modal.style.display = "block";
         } else {
             emailInput.classList.add("error");
-            modal.style.display = "block";
-        }
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function() {
-            modal.style.display = "none";
+            emailError.style.display = "block"; // Display the error message
         }
     };
 
     signNowButton.addEventListener("click", addSignature); // "Sign Now" 버튼 클릭 시 addSignature 함수 호출
+
+});
+
+
+$(function(){
+    $('.animate').scrolla({
+        mobile: true,
+        once: false
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    document.getElementById("motion-button").addEventListener("click", function() {
+        // .motion class
+        let motionElements = document.querySelectorAll('.motion');
+        motionElements.forEach(function(element) {
+            element.classList.remove('motion');
+        });
+
+        // .animate class
+        let animateElements = document.querySelectorAll('.animate');
+        animateElements.forEach(function(element) {
+            element.classList.remove('animate');
+        });
+    });
 });

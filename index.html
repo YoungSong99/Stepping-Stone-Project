@@ -7,11 +7,27 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
     <!-- script -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script>
     <script src="js/index.js"></script>
 </head>
 
 <body>
 <div class="wrap">
+    <!--menuOpen-->
+    <div class="menuOpen">
+        <button class="open"><img src="img/open-icon.png" alt=""></button>
+        <div class="menuWrap">
+            <a href="#" class="close"><img src="img/close.png" alt=""></a>
+            <a href="#" class="close en">close</a>
+            <ul class="tit en animate" data-animate="motion">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#create">CREATE STEPPING STONE</a></li>
+                <li><a href="#feedback">FEEDBACK</a></li>
+            </ul>
+        </div>
+    </div>
     <!--header-->
     <header>
         <div class="innerHeader">
@@ -29,6 +45,8 @@
                 <ul class="sns">
                     <li><a href="https://www.linkedin.com/in/youngsong01/"><img id="linkedin" src="img/linkedin.png" alt="linkedIn" width="15"></a></li>
                     <li><a href="https://github.com/YoungSong99"><img id="github" src="img/git.png" alt="github" width="20"></a></li>
+                    <li><a href="#"><button id="motion-button"><img src="img/stop.png" alt="motion" width="15"><span
+                            id="motion-text">Reduce Motion</span></button></a></li>
                     <li><a href="#"><button id="theme-button"><img src="img/darkmode.png" alt="darkmode" width="15"><span
                             id="mode-text">Dark Mode </span></button></a></li>
                 </ul>
@@ -38,19 +56,18 @@
     <!--contents-->
     <section class="visual">
         <div class="mainImg">
-            <p class="img animate" data-animate="motion"><img src="img/mainVisual.jpg" alt="mainImg" height="600"></p>
+            <p class="img"><img src="img/mainVisual.jpg" alt="mainImg" height="600"></p>
         </div>
         <div class="mainTxt">
-            <h2 class="tit en animate" data-animate="motion">
+            <h2 class="tit en motion" data-animate="motion">
                 <span class="en_s">Stepping Stone Project</span>
                 <span class="gray">Achieve your Goal</span>
                 <span>One Realistic Step at a Time</span>
             </h2>
-            <div class="txt">
+            <div class="txt motion" data-animate="motion">
                 <p>Consider setting, assessing, and planning the achievement of your goals using a stepping stone project.
                     <br>Stepping stones can help you get closer to success with every step you take.
                 </p>
-                <p><b><a href="#about" class="moreBtn">read more</a></b></p>
             </div>
         </div>
     </section>
@@ -58,7 +75,7 @@
         <div id="about"></div>
         <div class="inner">
             <div class="box">
-                <h2 class="tit en animate" data-animate="motion">
+                <h2 class="tit en motion" data-animate="motion">
                     <span class="en_s"><b>About Stepping Stone Project</b></span>
                     <span><b>Why is achieving goals difficult?</b></span>
                 </h2>
@@ -73,15 +90,16 @@
                         goal-setting approach isn't right. Setting, assessing, and planning the achievement of your goals using a
                         stepping stone project. Stepping stones can help you get closer to success with every step you take.
                     </p>
+                    <p><b><a href="https://pubmed.ncbi.nlm.nih.gov/2264509/" class="moreBtn">read more</a></b></p>
                 </div>
-                <p class="img animate" data-animate="motion"><img src="img/img_02.jpg" alt="todolist" height="950"></p>
+                <p class="img motion" data-animate="motion"><img src="img/img_02.jpg" alt="todolist" height="950"></p>
             </div>
             <div class="box design">
-                <h2 class="tit en animate" data-animate="motion">
+                <h2 class="tit en motion" data-animate="motion">
                     <span><b>Why the secret to success is <br>setting the right goals</b></span>
                 </h2>
                 <a href="https://www.youtube.com/embed/L4N1q4RNi9I?si=f7ZIdAKhg1vjDWUr" class="moreBtn">John Doerr | TED</a>
-                <p class="img animate" data-animate="motion"><iframe width="560" height="315"
+                <p class="img motion" data-animate="motion"><iframe width="560" height="315"
                                                                      src="https://www.youtube.com/embed/L4N1q4RNi9I?si=f7ZIdAKhg1vjDWUr" title="YouTube video player"
                                                                      frameborder="0"
                                                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -174,7 +192,7 @@
                             </div>
                             <div class="col-75">
                                 <input type="text" id="email" name="email" placeholder="Email">
-                                <span id="email-error" class="error-message" style="color: red"></span>
+                                <span id="email-error" class="error-message" style="color: red">Please enter a valid email address</span>
                             </div>
                         </div>
                         <div class="row">
@@ -189,19 +207,19 @@
                             <input id="sign-now-button" type="submit" value="Submit">
                         </div>
                     </form>
-                    <!-- The Error Modal -->
-                    <div id="myModal" class="modal">
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <p>Invalid email format</p>
-                        </div>
-                    </div>
                     <div class="signatures">
                         <p></p>
                         <p>🖊️  Teresa said "I like to use"</p>
                         <p>🖊️  Amy said "I will be more productive with this"</p>
                         <p>🖊️  DJ said "Thanks :)"</p>
+                    </div>
+                    <!-- The Error Modal -->
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <img src="img/thankyou.jpg" width="500">
+                            <p style="color: #eeeeee; font-size: 40px; padding-bottom: 20px">Thanks for your feedback!</p>
                     </div>
                 </div>
             </div>
